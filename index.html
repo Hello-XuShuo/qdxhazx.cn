@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <title>青岛西海岸中学</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles_and_scripts/fa-all.min.css">
+    <link rel="stylesheet" href="styles_and_scripts/style.css">
+</head>
+<body>
+    <!-- 页面加载覆盖层 -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
 
+
+    <!-- 半透明蒙版 -->
+    <div class="cover"></div>
+
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand gradient_font" href="#">青岛西海岸中学</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbar-toggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#">首页</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="//www.xihaian.gov.cn/ztzl/sydw/jyjx/gz/xhazx/">信息公开</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#info_card">学校信息</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#wechat_card">公众号</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#thanks_card">致谢</a>
+                    </li>
+                </ul>
+
+                <form action="//www.xihaian.gov.cn/so/" method="get" class="d-flex">
+                    <input class="form-control me-2" type="text" name="searchWord" placeholder="@青岛西海岸新区政务网">
+                    <button class="btn btn-outline-success" type="submit">搜索</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 内容 -->
+    <div class="container-fluid">
+        <div class="row">
+            <span class="placeholder col-12 invisible"></span>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-8">
+                <div id="carousel_captions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_captions" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel_captions" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel_captions" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/background.png" class="d-block w-100 opacity-50" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3 class="fw-bold text-dark">（校门侧门）</h3>
+                                <h6 class="fw-bold text-dark">我校拓宽拔尖创新人才培养渠道，促进国家课程与校本课程深度融合，开辟多元成长路径，开发学生潜质，培养新时代的创新型和学术型人才。</h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/2023_sign.jpg" class="d-block w-100 opacity-50" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3 class="fw-bold text-dark">（合影立墙）</h3>
+                                <h6 class="fw-bold text-dark">学校以“致广大，尽精微”为校训，秉持“以创新之教育，培养创新之人才”的办学理念，致力于培养“胸怀天下、敢为人先、个性鲜明、善于合作”的创新型人才，努力打造一所“辨识度强、影响力大、知名度高”的高品质学校和“具备对话世界能力”的学术型学校。</h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/corner.png" class="d-block w-100 opacity-50" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3 class="fw-bold text-dark">（校园一角）</h3>
+                                <h6 class="fw-bold text-dark">学校打造书院制育人特色，实施小班化精致教学，教室场所配备完善，现代化教学设施一应俱全，为学生搭建多元发展、成长成才立交桥。</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_captions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_captions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 信息卡片模态框 -->
+    <div id="info_card" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">青岛西海岸中学</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="images/logo.png" class="img-fluid rounded" alt="">
+                        </div>
+                        <div class="col-6">
+                            <div class="list-group">
+                                <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">校训</span>
+                                    <span>致广大 尽精微</span>
+                                </p>
+                                <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success">地址</span>
+                                    <span>青岛西海岸新区<br>云慧路 100号</span>
+                                </p>
+                                <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">电话</span>
+                                    <span>0532-88133366</span>
+                                </p>
+                                <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-secondary">邮箱</span>
+                                    <span>qdxhazx@163.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 微信公众号卡片模态框 -->
+    <div id="wechat_card" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-body">
+                <div class="modal-header">
+                    <h5 class="modal-title">微信公众号</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-8"> 
+                            <img src="images/WeChat_Official_Account.png" class="img-fluid rounded" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 致谢卡片模态框 -->
+    <div id="thanks_card" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">致谢</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="list-group">
+                            <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">GitHub</span>
+                                <span>提供源码托管服务、静态网站部署基础设施服务</span>
+                            </p>
+                            <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Bootstrap</span>
+                                <span>提供前端开发框架服务</span>
+                            </p>
+                            <p class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Xu Shuo</span>
+                                <span>提供前端开发与维护支持</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        // 页面加载完成后隐藏加载覆盖层
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
